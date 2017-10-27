@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		 		
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+					url:"http://localhost:3000",
+					type:"post",
+					data:{abc:2,sex:'nan'},
+					success:function(e){
+						for(i in e){
+							$('body').append('<p>'+e[i]+'</p>')
+						}
+						
+					}
+				})
+			})
+			
+		</script>
+		
+	</body>
+</html>
